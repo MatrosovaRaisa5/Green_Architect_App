@@ -21,6 +21,7 @@ import cafe.adriel.voyager.core.screen.Screen
 import com.yt.greenarchitectapp.R
 import com.yt.greenarchitectapp.commonui.*
 import com.yt.greenarchitectapp.screens.activities.HomeActivity
+import com.yt.greenarchitectapp.screens.geolocation.LocationActivity
 import com.yt.greenarchitectapp.ui.theme.orange
 import com.yt.greenarchitectapp.utils.launchActivity
 
@@ -132,7 +133,7 @@ object RegisterScreen : Screen {
                     verticalArrangement = Arrangement.SpaceBetween
                 ) {
                     EmailAndPassword(email = emailLogin, password = passwordLogin) {
-                        context.launchActivity<HomeActivity> { }
+                        context.launchActivity<LocationActivity> { }
                     }
                 }
 
@@ -153,9 +154,7 @@ object RegisterScreen : Screen {
                         buttonText = "Зарегистрироваться",
                         isForget = false
                     ) {
-                        context.launchActivity<HomeActivity> {}
-
-
+                        context.launchActivity<LocationActivity> { }
                     }
 
                 }
